@@ -25,7 +25,7 @@ public class UserController {
 	private UserService userService;
 	
     @GetMapping("/user/")
-    public static List<UserDTO> getUsers() {
+    public List<UserDTO> getUsers() {
         List<UserDTO> usuarios = userService.getAll();
         return usuarios;
     }

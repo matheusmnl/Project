@@ -18,12 +18,11 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	public List<UserDTO> getAll() {
-		List<User>usuarios = userRepository.findAll();
+		List<User> usuarios = userRepository.findAll();
 		return usuarios
 				.stream()
 				.map(UserDTO::convert)
 				.collect(Collectors.toList());
-				
 	}
 	
 	public UserDTO findById(long userId) {
